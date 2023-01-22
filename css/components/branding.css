@@ -1,0 +1,132 @@
+#branding-packages {
+  background-color: var(--branding-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 40px 0;
+}
+
+.branding-card {
+  width: 70%;
+  background-color: var(--base-bg-color);
+  height: 400px;
+  position: relative;
+}
+
+.ghost {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: -80px;
+  bottom: 0;
+  top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ghost h2:before {
+  font-size: 2em;
+  color: var(--hero-bg-color);
+  counter-increment: branding;
+  content: "0" counter(branding);
+}
+
+#branding-packages h2 {
+  font-weight: 500;
+}
+
+.branding-card {
+  display: flex;
+}
+
+.branding-card:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.branding-card-body {
+  flex: 3 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.branding-card-image {
+  background-size: cover;
+  background-position: right;
+  flex: 2 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.branding-card-caption {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-accent-black);
+  width: 100%;
+  z-index: 1;
+}
+
+.branding-card-caption p {
+  color: #fff;
+  font-family: var(--main-body-monospace);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gradient {
+  position: absolute;
+  background: linear-gradient(to top, rgb(132 132 132 / 85%), transparent);
+  height: 100%;
+  width: 100%;
+}
+
+.branding-card-text h2 {
+  margin-bottom: 14px;
+  margin-top: 18px;
+}
+
+.branding-card em {
+  font-family: var(--main-body-sans-serif);
+  font-style: italic;
+}
+
+.branding-card-text {
+  padding: 16px 20px;
+}
+
+.branding-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  min-height: 50px;
+  border-top: 1px solid #d2d2d2;
+}
+
+.branding-card-bottom-timeframe {
+  border-right: 1px solid #d2d2d2;
+}
+
+.branding-card-bottom-timeframe, .branding-card-bottom-investment {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.branding-card-bottom-timeframe p:first-of-type, .branding-card-bottom-investment p:first-of-type {
+  font-family: var(--main-body-sans-serif);
+  font-style: italic;
+  font-size: 12px;
+  align-items: center;
+}
+
+.branding-card-bottom-timeframe p:not(:first-of-type), .branding-card-bottom-investment p:not(:first-of-type) {
+  font-family: var(--main-body-monospace);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}

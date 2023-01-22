@@ -1,0 +1,133 @@
+/* Importing components */
+@import url(components/hero.css);
+@import url(components/chapters.css);
+@import url(components/branding.css);
+@import url(components/faq.css);
+
+/* GoogleFonts */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inconsolata:wght@300&family=Quicksand:wght@300;400&display=swap');
+
+/* Universal styles */
+
+/* root variables */
+:root {
+  --hero-bg-color: #EAE6DB;
+  --base-bg-color: #F8F5F1;
+  --branding-bg-color: #BEBAB0;
+  --cta-bg-color:#9B9A9C;
+  --main-accent-black: #333031;
+  --main-font-color: #585554;
+  --main-body-serif: "EB Garamond";
+  --main-body-sans-serif: "Quicksand";
+  --main-body-monospace: "Inconsolata";
+}
+
+/* reset the css from https://meyerweb.com/eric/tools/css/reset/ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  color: var(--main-font-color);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* General Styling */
+.page-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+body {
+  margin: 60px;
+  counter-reset: faq branding;
+}
+
+body, h1, h2, h3, p {
+  font-family: var(--main-body-serif);
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.margin-bottom-24 {
+  margin-bottom: 24px;
+}
+
+.emphasis {
+  font-family: var(--main-body-sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* .divider {
+  border-bottom: 1px solid var(--main-accent-black);
+  width: 10%;
+  transform: rotate(-45deg);
+  transform-origin: right;
+} */

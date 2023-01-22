@@ -1,0 +1,87 @@
+#chapters {
+  background-color: white;
+  padding: 50px;
+  position: relative;
+}
+
+.chapters-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: var(--base-bg-color);
+  padding: 50px 125px;
+}
+
+.toc {
+  box-sizing: border-box;
+  position:relative;
+  text-transform: capitalize;
+  padding: 0 50px 0 0;
+}
+
+.toc:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background: #000;
+}
+
+.chapter-body {
+  padding: 0 50px;
+}
+
+.chapter-header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 18px;
+  align-items: center;
+}
+
+.index {
+  counter-reset: chapter;
+}
+
+.index ul {
+  padding: 8px 0;
+}
+
+.index ul li {
+  padding: 5px 0;
+}
+
+.index ul li:first-child a:before {
+  counter-set: chapter 00;
+}
+
+.index ul li a:before {
+  content: "0" counter(chapter) ":";
+  counter-increment: chapter;
+}
+
+.index ul li a {
+  font-family: var(--main-body-monospace);
+  font-size: 14px;
+}
+
+.chapter-next-button {
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn-next-arrow {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  border: 1px black solid;
+  background-color: transparent;
+}
+
+.btn-next-arrow i {
+  font-size: 16px;
+}
