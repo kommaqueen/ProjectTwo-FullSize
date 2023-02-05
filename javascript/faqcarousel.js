@@ -67,6 +67,9 @@ nextButton.addEventListener("click", (event) => {
   } else if (currentNumber === "4") {
     faqText.innerHTML = answer5;
     faqNumber.innerText = "5";
+  } else if (currentNumber === "0") {
+    faqText.innerHTML = answer1;
+    faqNumber.innerText = "1";
   }
 })
 
