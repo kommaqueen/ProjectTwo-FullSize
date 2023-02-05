@@ -100,6 +100,14 @@
   padding: 3% 0;
 }
 
+.question-list ul li a {
+  text-decoration: none
+}
+
+.question-list ul li a:hover {
+  text-decoration: underline;
+}
+
 .question-list ul li:before {
   counter-increment: faq;
   content: "0" counter(faq)".";
