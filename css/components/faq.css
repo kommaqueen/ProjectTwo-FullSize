@@ -129,6 +129,10 @@
   padding: 0 1em;
 }
 
+.faq-navigation-left:hover, .faq-navigation-right:hover {
+  cursor: pointer;
+}
+
 .faq-navigation-right {
   flex-direction: row-reverse;
   border-left:  2px solid var(--main-accent-black);
